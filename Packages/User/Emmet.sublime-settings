@@ -1,0 +1,19 @@
+{
+		"snippets": {
+	        "variables": {
+	            "lang": "ja",
+	            "locale": "ja-JP",
+	            "charset": "UTF-8",
+	            "indentation": "\t",
+	            "newline": "\n"
+	        }
+    	},
+		"snippets": {
+			"css": {
+				"profile": "css",
+				"snippets": {
+				"@c": "@charset 'utf-8';"
+				}
+			}
+		}
+}

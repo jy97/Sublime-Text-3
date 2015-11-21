@@ -1,0 +1,9 @@
+*.cache
+*_tmp
+Backup/
+Cache/
+Index_
+Local/
+Packages/User/Projects/
+SFTP.sublime-settings
+

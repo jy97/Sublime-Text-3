@@ -1,0 +1,40 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Abacus",
+		"AutoFileName",
+		"BracketHighlighter",
+		"Color Highlighter",
+		"ColorPicker",
+		"CSS3",
+		"Emmet",
+		"GitGutter",
+		"HTML-CSS-JS Prettify",
+		"HTML5",
+		"jQuery",
+		"LiveStyle",
+		"MacTerminal",
+		"Markdown Extended",
+		"MoveText",
+		"OmniMarkupPreviewer",
+		"Open Folder",
+		"Package Control",
+		"PackageResourceViewer",
+		"Project Manager",
+		"Sass",
+		"SCSS",
+		"SFTP",
+		"SublimeLinter",
+		"SublimeLinter-csslint",
+		"SublimeLinter-jshint",
+		"SublimeLinter-json",
+		"Sync View Scroll",
+		"SyncedSideBar",
+		"Tag",
+		"Theme - Fox"
+	]
+}

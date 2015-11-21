@@ -1,9 +1,9 @@
 *.cache
 *_tmp
+*.last-run
 Backup/
 Cache/
 Index/
 Local/
 Packages/User/Projects/
 SFTP.sublime-settings
-

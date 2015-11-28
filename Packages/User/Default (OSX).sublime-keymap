@@ -41,5 +41,6 @@
   // move_text_up: Moves the selected text one line up
   // move_text_down: Moves the selected text one line down
   { "keys": ["super+ctrl+left"], "command": "move_text_left" },
-  { "keys": ["super+ctrl+right"], "command": "move_text_right" }
+  { "keys": ["super+ctrl+right"], "command": "move_text_right" },
+  { "keys": ["ctrl+super+t"], "command": "open_mac_terminal" }
 ]

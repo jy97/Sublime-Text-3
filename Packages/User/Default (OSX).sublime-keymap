@@ -46,5 +46,22 @@
   //no-wrap
   { "keys": ["ctrl+super+w"], "command": "toggle_setting", "args": {"setting": "word_wrap"}},
   //SFTP: monitor file change & upload
-  { "keys": ["super+ctrl+m"], "command": "sftp_monitor_file" }
+  { "keys": ["super+ctrl+m"], "command": "sftp_monitor_file" },
+  //Move to End Of Line
+  {
+    "keys": ["-"], "command": "move_to", "args": {"to": "eol", "extend": false},
+    "context": [ { "key": "setting.command_mode", "operand": true }]
+  },
+  //Exit insert mode
+  { "keys": ["j", "j"], "command": "exit_insert_mode",
+    "context":
+    [
+      { "key": "setting.command_mode", "operand": false },
+      { "key": "setting.is_widget", "operand": false }
+    ]
+  },
+  { "keys": ["ctrl+l"], "command": "move", "args": {"by": "characters", "forward": true } },
+  { "keys": ["ctrl+h"], "command": "move", "args": {"by": "characters", "forward": false } },
+  { "keys": ["ctrl+j"], "command": "move", "args": {"by": "lines", "forward": true } },
+  { "keys": ["ctrl+k"], "command": "move", "args": {"by": "lines", "forward": false } }
 ]

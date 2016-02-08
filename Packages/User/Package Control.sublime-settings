@@ -10,8 +10,8 @@
 		"BracketHighlighter",
 		"Color Highlighter",
 		"ColorPicker",
+		"CSS Color Converter",
 		"CSS3",
-		"DocBlockr",
 		"Emmet",
 		"GitGutter",
 		"HTML-CSS-JS Prettify",
@@ -24,7 +24,6 @@
 		"MoveText",
 		"Open Folder",
 		"Package Control",
-		"PackageResourceViewer",
 		"Project Manager",
 		"Sass",
 		"SCSS",
@@ -36,6 +35,7 @@
 		"Sync View Scroll",
 		"SyncedSideBar",
 		"Tag",
-		"Theme - Fox"
+		"Theme - Fox",
+		"Vintage Numbers"
 	]
 }

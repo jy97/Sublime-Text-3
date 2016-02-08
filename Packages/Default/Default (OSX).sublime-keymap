@@ -632,9 +632,9 @@ and don't need to be repeated here. Anything listed here will take precedence, h
   },
 
   // Find panel key bindings
-  // { "keys": ["enter"], "command": "find_next", "context":
-  //   [{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
-  // },
+  { "keys": ["enter"], "command": "find_next", "context":
+    [{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+  },
   { "keys": ["shift+enter"], "command": "find_prev", "context":
     [{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
   },
@@ -643,9 +643,9 @@ and don't need to be repeated here. Anything listed here will take precedence, h
   },
 
   // Replace panel key bindings
-  // { "keys": ["enter"], "command": "find_next", "context":
-  //   [{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
-  // },
+  { "keys": ["enter"], "command": "find_next", "context":
+    [{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+  },
   { "keys": ["shift+enter"], "command": "find_prev", "context":
     [{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
   },
@@ -657,9 +657,9 @@ and don't need to be repeated here. Anything listed here will take precedence, h
   },
 
   // Incremental find panel key bindings
-  // { "keys": ["enter"], "command": "hide_panel", "context":
-  //   [{"key": "panel", "operand": "incremental_find"}, {"key": "panel_has_focus"}]
-  // },
+  { "keys": ["enter"], "command": "hide_panel", "context":
+    [{"key": "panel", "operand": "incremental_find"}, {"key": "panel_has_focus"}]
+  },
   { "keys": ["shift+enter"], "command": "find_prev", "context":
     [{"key": "panel", "operand": "incremental_find"}, {"key": "panel_has_focus"}]
   },

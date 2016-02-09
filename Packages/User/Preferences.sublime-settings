@@ -7,12 +7,8 @@
 	"default_encoding": "UTF-8",
 	"disable_formatted_linebreak": true,
 	"disable_tab_abbreviations": true,
-	"draw_white_space": "all",
 	"draw_indent_guides": true,
-	"indent_guide_options": [
-		"draw_normal",
-		"draw_active"
-	],
+	"draw_white_space": "all",
 	"fallback_encoding": "UTF-8",
 	"font_options":
 	[
@@ -21,8 +17,12 @@
 	"font_size": 13,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
-	"ignored_packages":
+	"ignored_packages":[],
+	"vintage_start_in_command_mode": true,
+	"indent_guide_options":
 	[
+		"draw_normal",
+		"draw_active"
 	],
 	"line_padding_top": 6,
 	"open_files_in_new_window": true,

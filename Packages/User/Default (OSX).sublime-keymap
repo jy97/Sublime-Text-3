@@ -32,8 +32,6 @@
         }
     }
   },
-  //open project in new window
-  { "keys": ["super+alt+o"], "command": "" },
   {
     "keys": ["super+ctrl+o"],
     "command": "project_manager", "args": {"action": "new"}
@@ -63,5 +61,6 @@
   { "keys": ["ctrl+l"], "command": "move", "args": {"by": "characters", "forward": true } },
   { "keys": ["ctrl+h"], "command": "move", "args": {"by": "characters", "forward": false } },
   { "keys": ["ctrl+j"], "command": "move", "args": {"by": "lines", "forward": true } },
-  { "keys": ["ctrl+k"], "command": "move", "args": {"by": "lines", "forward": false } }
+  { "keys": ["ctrl+k"], "command": "move", "args": {"by": "lines", "forward": false } },
+  { "keys": ["alt+super+c"], "command": "colorconvert"}
 ]

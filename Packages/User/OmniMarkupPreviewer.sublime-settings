@@ -1,8 +1,0 @@
-{
-    // User public static files should be placed into
-    //   ${packages}/User/OmniMarkupPreviewer/public/
-    // User templates should be placed into:
-    //   ${packages}/User/OmniMarkupPreviewer/templates/
-    // Requires browser reload
-    "html_template_name": "github-custom"
-}

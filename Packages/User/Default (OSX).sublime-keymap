@@ -75,13 +75,31 @@
   { "keys": ["ctrl+h"], "command": "move", "args": {"by": "characters", "forward": false } },
   { "keys": ["ctrl+j"], "command": "move", "args": {"by": "lines", "forward": true } },
   { "keys": ["ctrl+k"], "command": "move", "args": {"by": "lines", "forward": false } },
-    // exit visual mode
+    { "keys": ["ctrl+j"], "command": "exit_insert_mode",
+    "context":
+    [
+      { "key": "setting.command_mode", "operand": false },
+      { "key": "setting.is_widget", "operand": false },
+      { "key": "setting.vintage_ctrl_keys" }
+    ]
+  },
+  // exit visual mode
   { "keys": ["ctrl+j"], "command": "exit_visual_mode",
-      "context":
-      [
-          { "key": "setting.command_mode"},
-          { "key": "num_selections", "operand": 1},
-          { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false },
-      ]
+    "context":
+    [
+      { "key": "setting.command_mode"},
+      { "key": "num_selections", "operand": 1},
+      { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false },
+      { "key": "setting.vintage_ctrl_keys" }
+    ]
+  },
+
+  { "keys": ["ctrl+j"], "command": "vi_cancel_current_action", "context":
+    [
+      { "key": "setting.command_mode" },
+      { "key": "vi_has_input_state" },
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false },
+      { "key": "setting.vintage_ctrl_keys" }
+    ]
   }
 ]

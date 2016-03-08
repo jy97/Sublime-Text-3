@@ -45,6 +45,8 @@
   { "keys": ["ctrl+super+w"], "command": "toggle_setting", "args": {"setting": "word_wrap"}},
   //SFTP: monitor file change & upload
   { "keys": ["super+ctrl+m"], "command": "sftp_monitor_file" },
+  //color converter
+  { "keys": ["alt+super+c"], "command": "colorconvert"},
   //Move to End Of Line
   {
     "keys": ["-"], "command": "move_to", "args": {"to": "eol", "extend": false},
@@ -65,16 +67,7 @@
          { "key": "setting.is_widget", "operand": false }
      ]
   },
-  // exit visual mode
-  { "keys": ["ctrl+j"], "command": "exit_visual_mode",
-      "context":
-      [
-          { "key": "setting.command_mode"},
-          { "key": "num_selections", "operand": 1},
-          { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
-      ]
-  },
-  // insert line-break in command-mode
+ // insert line-break in command-mode
   { "keys": ["enter"], "command": "insert", "args": {"characters": "\n" },
      "context": [{ "key": "setting.command_mode" }, ]
   },
@@ -82,5 +75,13 @@
   { "keys": ["ctrl+h"], "command": "move", "args": {"by": "characters", "forward": false } },
   { "keys": ["ctrl+j"], "command": "move", "args": {"by": "lines", "forward": true } },
   { "keys": ["ctrl+k"], "command": "move", "args": {"by": "lines", "forward": false } },
-  { "keys": ["alt+super+c"], "command": "colorconvert"}
+    // exit visual mode
+  { "keys": ["ctrl+j"], "command": "exit_visual_mode",
+      "context":
+      [
+          { "key": "setting.command_mode"},
+          { "key": "num_selections", "operand": 1},
+          { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false },
+      ]
+  }
 ]

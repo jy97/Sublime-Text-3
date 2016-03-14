@@ -75,15 +75,6 @@
   { "keys": ["ctrl+h"], "command": "move", "args": {"by": "characters", "forward": false } },
   { "keys": ["ctrl+j"], "command": "move", "args": {"by": "lines", "forward": true } },
   { "keys": ["ctrl+k"], "command": "move", "args": {"by": "lines", "forward": false } },
-    { "keys": ["ctrl+j"], "command": "exit_insert_mode",
-    "context":
-    [
-      { "key": "setting.command_mode", "operand": false },
-      { "key": "setting.is_widget", "operand": false },
-      { "key": "setting.vintage_ctrl_keys" }
-    ]
-  },
-  // exit visual mode
   { "keys": ["ctrl+j"], "command": "exit_visual_mode",
     "context":
     [
@@ -93,7 +84,6 @@
       { "key": "setting.vintage_ctrl_keys" }
     ]
   },
-
   { "keys": ["ctrl+j"], "command": "vi_cancel_current_action", "context":
     [
       { "key": "setting.command_mode" },
@@ -101,5 +91,16 @@
       { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false },
       { "key": "setting.vintage_ctrl_keys" }
     ]
+  },
+  { "keys": ["ctrl+j"], "args": null, "command": "single_selection",
+    "context":
+    [
+      {"key": "setting.command_mode"},
+      {"key": "selection_empty"}
+    ]
+  },
+  // always paste register "0 on p
+  { "keys": ["p"], "command": "vi_paste_right", "args": {"register": "0"},
+    "context": [{"key": "setting.command_mode"}]
   }
 ]

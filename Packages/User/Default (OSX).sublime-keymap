@@ -102,5 +102,10 @@
   // always paste register "0 on p
   { "keys": ["p"], "command": "vi_paste_right", "args": {"register": "0"},
     "context": [{"key": "setting.command_mode"}]
+  },
+  // paste reg 1
+  {
+    "keys": ["ctrl+p"], "command": "vi_paste_right", "args": {"register": "1"},
+    "context": [{"key": "setting.command_mode"}]
   }
 ]

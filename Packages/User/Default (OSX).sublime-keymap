@@ -71,10 +71,6 @@
   { "keys": ["enter"], "command": "insert", "args": {"characters": "\n" },
      "context": [{ "key": "setting.command_mode" }, ]
   },
-  { "keys": ["ctrl+l"], "command": "move", "args": {"by": "characters", "forward": true } },
-  { "keys": ["ctrl+h"], "command": "move", "args": {"by": "characters", "forward": false } },
-  { "keys": ["ctrl+j"], "command": "move", "args": {"by": "lines", "forward": true } },
-  { "keys": ["ctrl+k"], "command": "move", "args": {"by": "lines", "forward": false } },
   { "keys": ["ctrl+j"], "command": "exit_visual_mode",
     "context":
     [

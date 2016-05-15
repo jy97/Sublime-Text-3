@@ -9,8 +9,14 @@
 	"disable_tab_abbreviations": true,
 	"draw_indent_guides": true,
 	"draw_white_space": "all",
+	"enable_tab_scrolling": false,
 	"fade_fold_buttons": false,
 	"fallback_encoding": "UTF-8",
+	"folder_exclude_patterns":
+	[
+		".git",
+		"node_modules"
+	],
 	"font_options":
 	[
 		"subpixel_antialias"
@@ -31,7 +37,8 @@
 	"open_files_in_new_window": true,
 	"rulers":
 	[
-		80
+		80,
+		100
 	],
 	"show_encoding": true,
 	"show_full_path": true,

@@ -9,6 +9,7 @@
 		"AutoFileName",
 		"Babel",
 		"BracketHighlighter",
+		"Browser Refresh",
 		"ColorPicker",
 		"CSS Color Converter",
 		"CSS3",
@@ -32,6 +33,7 @@
 		"SublimeLinter-json",
 		"SyncedSideBar",
 		"Tag",
-		"Theme - Fox"
+		"Theme - Fox",
+		"Theme - Piatto"
 	]
 }

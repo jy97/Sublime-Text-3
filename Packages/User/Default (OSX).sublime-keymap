@@ -67,7 +67,7 @@
          { "key": "setting.is_widget", "operand": false }
      ]
   },
- // insert line-break in command-mode
+  // insert line-break in command-mode
   { "keys": ["enter"], "command": "insert", "args": {"characters": "\n" },
      "context": [{ "key": "setting.command_mode" }, ]
   },
@@ -103,5 +103,14 @@
   {
     "keys": ["ctrl+p"], "command": "vi_paste_right", "args": {"register": "1"},
     "context": [{"key": "setting.command_mode"}]
-  }
+  },
+  // browser refresh (for smartphone DEV)
+    {
+        "keys": ["command+r"], "command": "browser_refresh", "args": {
+            "auto_save": true,
+            "delay": 0.5,
+            "activate": false,
+            "browsers" : ["chrome"]
+        }
+    }
 ]

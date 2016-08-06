@@ -3,7 +3,10 @@
 		"keys": ["super+¥"], "command": "toggle_side_bar"
 	},
 	{ "keys": ["super+alt+a"], "command": "abacus" },
-  //wrap by quote
+
+  //
+  // wrap by quote
+  //
   {
         "keys": ["alt+super+7"],
         "command": "bh_key",
@@ -17,7 +20,10 @@
             }
         }
     },
-  //select inside tag
+
+  //
+  // select inside tag
+  //
   {
     "no_outside_adj": null,
     "keys": ["ctrl+alt+super+a"],
@@ -36,23 +42,65 @@
     "keys": ["super+ctrl+o"],
     "command": "project_manager", "args": {"action": "new"}
   },
-  //move text right and left
+
+  //
+  // move text right and left
+  //
   { "keys": ["super+ctrl+left"], "command": "move_text_left" },
   { "keys": ["super+ctrl+right"], "command": "move_text_right" },
-  //open iterm
+
+  //
+  // open iterm
+  //
   { "keys": ["ctrl+super+t"], "command": "open_mac_terminal" },
-  //no-wrap
+
+  //
+  // no-wrap
+  //
   { "keys": ["ctrl+super+w"], "command": "toggle_setting", "args": {"setting": "word_wrap"}},
-  //SFTP: monitor file change & upload
+
+  //
+  // SFTP: monitor file change & upload
+  //
   { "keys": ["super+ctrl+m"], "command": "sftp_monitor_file" },
-  //color converter
+
+  //
+  // color converter
+  //
   { "keys": ["alt+super+c"], "command": "colorconvert"},
-  //Move to End Of Line
+
+  //
+  // move cursor in insertmode
+  //
+  // { "keys": ["ctrl+j"], "command": "move", "args": { "by": "lines", "forward": true }, "context": [{"key": "setting.command_mode", "operand": false}] },
+  // { "keys": ["ctrl+k"], "command": "move", "args": { "by": "lines", "forward": false }, "context": [{ "key": "setting.command_mode", "operand": false }] },
+  { "keys": ["ctrl+h"], "command": "move", "args": { "by": "characters", "forward": false }, "context": [{ "key": "setting.command_mode", "operand": false }] },
+  { "keys": ["ctrl+l"], "command": "move", "args": { "by": "characters", "forward": true }, "context": [{ "key": "setting.command_mode", "operand": false }] },
+
+  //
+  // move to end of line
+  //
   {
     "keys": ["-"], "command": "move_to", "args": {"to": "eol", "extend": false},
     "context": [ { "key": "setting.command_mode", "operand": true }]
   },
-  //Exit insert mode
+  { "keys": ["ctrl+l"], "command": "set_motion", "args": {
+    "motion": "vi_move_to_hard_eol",
+    "motion_args": {"repeat": 1, "extend": true},
+    "inclusive": true,
+    "clip_to_line": true },
+    "context": [{"key": "setting.command_mode"}]
+  },
+  { "keys": ["ctrl+h"], "command": "set_motion", "args": {
+    "motion": "vi_move_to_first_non_white_space_character",
+    "motion_args": {"extend": true },
+    "clip_to_line": true },
+    "context": [{"key": "setting.command_mode"}]
+  },
+
+  //
+  // Exit insert mode
+  //
   { "keys": ["j", "j"], "command": "exit_insert_mode",
     "context":
     [
@@ -60,14 +108,25 @@
       { "key": "setting.is_widget", "operand": false }
     ]
   },
-  { "keys": ["ctrl+j"], "command": "exit_insert_mode",
+
+  { "keys": ["ctrl+j"], "command": "imeoff",
      "context":
      [
          { "key": "setting.command_mode", "operand": false },
          { "key": "setting.is_widget", "operand": false }
      ]
   },
+  { "keys": ["ctrl+["], "command": "imeoff",
+     "context":
+     [
+         { "key": "setting.command_mode", "operand": false },
+         { "key": "setting.is_widget", "operand": false }
+     ]
+  },
+
+  //
   // insert line-break in command-mode
+  //
   { "keys": ["enter"], "command": "insert", "args": {"characters": "\n" },
      "context": [{ "key": "setting.command_mode" }, ]
   },
@@ -95,22 +154,45 @@
       {"key": "selection_empty"}
     ]
   },
+
+  //
   // always paste register "0 on p
+  //
   { "keys": ["p"], "command": "vi_paste_right", "args": {"register": "0"},
     "context": [{"key": "setting.command_mode"}]
   },
+
+  //
   // paste reg 1
+  //
   {
     "keys": ["ctrl+p"], "command": "vi_paste_right", "args": {"register": "1"},
     "context": [{"key": "setting.command_mode"}]
   },
+
+  //
   // browser refresh (for smartphone DEV)
-    {
-        "keys": ["command+r"], "command": "browser_refresh", "args": {
-            "auto_save": true,
-            "delay": 0.5,
-            "activate": false,
-            "browsers" : ["chrome"]
-        }
-    }
+  //
+  {
+      "keys": ["command+r"], "command": "browser_refresh", "args": {
+          "auto_save": true,
+          "delay": 0.5,
+          "activate": false,
+          "browsers" : ["chrome"]
+      }
+  },
+
+  //
+  // Origami keybind
+  //
+  // create vertical pane
+  { "keys": [":", "v", "s", "p"], "command": "create_pane", "args": {"direction": "right", "give_focus": true} },
+  // create horizontal pane
+  { "keys": [":", "s", "p"], "command": "create_pane", "args": {"direction": "down", "give_focus": true} },
+  // destroy pane
+  { "keys": [":", "d", "p"], "command": "destroy_pane", "args": {"direction": "self"} },
+  { "keys": [":", "p", "k"], "command": "travel_to_pane", "args": {"direction": "up"} },
+  { "keys": [":", "p", "l"], "command": "travel_to_pane", "args": {"direction": "right"} },
+  { "keys": [":", "p", "j"], "command": "travel_to_pane", "args": {"direction": "down"} },
+  { "keys": [":", "p", "h"], "command": "travel_to_pane", "args": {"direction": "left"} },
 ]

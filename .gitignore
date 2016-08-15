@@ -10,3 +10,6 @@ Packages/User/sftp_servers/
 SFTP.sublime-settings
 Packages/PyV8/
 Installed Packages/PyV8/
+*.merged-ca-bundle
+*.system-ca-bundle
+*.user-ca-bundle

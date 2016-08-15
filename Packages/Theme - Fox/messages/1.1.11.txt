@@ -1,0 +1,20 @@
+# New in Fox 1.1.11
+
+- Added more icons, samples, and screenshots
+- Reorganized preferences
+- Vertically centered input text
+- Adjusted text color on highlight/selection
+- Fixed installation message:
+
+  ```
+  {
+    "theme": "Fox.sublime-theme"
+  }
+  ```
+
+*If you have any suggestions for improvements and fixes, please feel free to add issues at [GitHub](http://github.com/karelvuong/fox/issues).*
+
+***
+
+
+*Note: Don't forget to restart Sublime Text after activating the theme.*

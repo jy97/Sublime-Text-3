@@ -1,43 +1,25 @@
 [
-	{
-		"keys": ["super+¥"], "command": "toggle_side_bar"
-	},
-	{ "keys": ["super+alt+a"], "command": "abacus" },
+	{ "keys": ["super+¥"], "command": "toggle_side_bar" },
+  { "keys": ["super+alt+a"], "command": "abacus" },
 
   //
-  // wrap by quote
+  // swap quote
   //
   {
-        "keys": ["alt+super+7"],
-        "command": "bh_key",
-        "args":
-        {
-            "lines" : true,
-            "plugin":
-            {
-                "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"],
-                "command": "bh_modules.swapquotes"
-            }
-        }
-    },
-
-  //
-  // select inside tag
-  //
-  {
-    "no_outside_adj": null,
-    "keys": ["ctrl+alt+super+a"],
+    "keys": ["alt+super+7"],
     "command": "bh_key",
-    "args":
-    {
-        "lines" : true,
-        "plugin":
-        {
-            "type": ["__all__"],
-            "command": "bh_modules.bracketselect"
-        }
+    "args": {
+      "lines" : true,
+      "plugin": {
+        "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"],
+        "command": "bh_modules.swapquotes"
+      }
     }
   },
+
+  //
+  // open project in new window
+  //
   {
     "keys": ["super+ctrl+o"],
     "command": "project_manager", "args": {"action": "new"}
@@ -50,12 +32,12 @@
   { "keys": ["super+ctrl+right"], "command": "move_text_right" },
 
   //
-  // open iterm
+  // open in iterm
   //
   { "keys": ["ctrl+super+t"], "command": "open_mac_terminal" },
 
   //
-  // no-wrap
+  // switch wrap-mode
   //
   { "keys": ["ctrl+super+w"], "command": "toggle_setting", "args": {"setting": "word_wrap"}},
 
@@ -70,12 +52,53 @@
   { "keys": ["alt+super+c"], "command": "colorconvert"},
 
   //
+  // browser refresh (for smartphone DEV)
+  //
+  {
+    "keys": ["command+r"], "command": "browser_refresh",
+    "args": {
+      "auto_save": true,
+      "delay": 0.5,
+      "activate": false,
+      "browsers" : ["chrome"]
+    }
+  },
+
+  //
+  // Origami keybind
+  //
+  // create vertical pane
+  { "keys": [":", "v", "s", "p"], "command": "create_pane", "args": {"direction": "right", "give_focus": true} },
+  // create horizontal pane
+  { "keys": [":", "s", "p"], "command": "create_pane", "args": {"direction": "down", "give_focus": true} },
+  // destroy pane
+  { "keys": [":", "d", "p"], "command": "destroy_pane", "args": {"direction": "self"} },
+  // move pane
+  { "keys": [":", "p", "k"], "command": "travel_to_pane", "args": {"direction": "up"} },
+  { "keys": [":", "p", "l"], "command": "travel_to_pane", "args": {"direction": "right"} },
+  { "keys": [":", "p", "j"], "command": "travel_to_pane", "args": {"direction": "down"} },
+  { "keys": [":", "p", "h"], "command": "travel_to_pane", "args": {"direction": "left"} },
+
+
+
+  ////////////////////////////
+  //                        //
+  //    Vintage Keybinds    //
+  //                        //
+  ////////////////////////////
+  //
   // move cursor in insertmode
   //
   // { "keys": ["ctrl+j"], "command": "move", "args": { "by": "lines", "forward": true }, "context": [{"key": "setting.command_mode", "operand": false}] },
   // { "keys": ["ctrl+k"], "command": "move", "args": { "by": "lines", "forward": false }, "context": [{ "key": "setting.command_mode", "operand": false }] },
-  { "keys": ["ctrl+h"], "command": "move", "args": { "by": "characters", "forward": false }, "context": [{ "key": "setting.command_mode", "operand": false }] },
-  { "keys": ["ctrl+l"], "command": "move", "args": { "by": "characters", "forward": true }, "context": [{ "key": "setting.command_mode", "operand": false }] },
+  {
+    "keys": ["ctrl+h"], "command": "move", "args": { "by": "characters", "forward": false },
+    "context": [{ "key": "setting.command_mode", "operand": false }]
+  },
+  {
+    "keys": ["ctrl+l"], "command": "move", "args": { "by": "characters", "forward": true },
+    "context": [{ "key": "setting.command_mode", "operand": false }]
+  },
 
   //
   // move to end of line
@@ -84,81 +107,106 @@
     "keys": ["-"], "command": "move_to", "args": {"to": "eol", "extend": false},
     "context": [ { "key": "setting.command_mode", "operand": true }]
   },
-  { "keys": ["ctrl+l"], "command": "set_motion", "args": {
-    "motion": "vi_move_to_hard_eol",
-    "motion_args": {"repeat": 1, "extend": true},
-    "inclusive": true,
-    "clip_to_line": true },
+  {
+    "keys": ["ctrl+l"], "command": "set_motion",
+    "args": {
+      "motion": "vi_move_to_hard_eol",
+      "motion_args": {"repeat": 1, "extend": true},
+      "inclusive": true,
+      "clip_to_line": true
+    },
     "context": [{"key": "setting.command_mode"}]
   },
-  { "keys": ["ctrl+h"], "command": "set_motion", "args": {
-    "motion": "vi_move_to_first_non_white_space_character",
-    "motion_args": {"extend": true },
-    "clip_to_line": true },
+  {
+    "keys": ["ctrl+h"], "command": "set_motion",
+    "args": {
+      "motion": "vi_move_to_first_non_white_space_character",
+      "motion_args": {"extend": true },
+      "clip_to_line": true
+    },
     "context": [{"key": "setting.command_mode"}]
-  },
-
-  //
-  // Exit insert mode
-  //
-  { "keys": ["j", "j"], "command": "exit_insert_mode",
-    "context":
-    [
-      { "key": "setting.command_mode", "operand": false },
-      { "key": "setting.is_widget", "operand": false }
-    ]
-  },
-
-  { "keys": ["ctrl+j"], "command": "imeoff",
-     "context":
-     [
-         { "key": "setting.command_mode", "operand": false },
-         { "key": "setting.is_widget", "operand": false }
-     ]
-  },
-  { "keys": ["ctrl+["], "command": "imeoff",
-     "context":
-     [
-         { "key": "setting.command_mode", "operand": false },
-         { "key": "setting.is_widget", "operand": false }
-     ]
   },
 
   //
   // insert line-break in command-mode
   //
-  { "keys": ["enter"], "command": "insert", "args": {"characters": "\n" },
-     "context": [{ "key": "setting.command_mode" }, ]
+  {
+    "keys": ["enter"], "command": "insert", "args": {"characters": "\n" },
+    "context": [{ "key": "setting.command_mode" }, ]
   },
-  { "keys": ["ctrl+j"], "command": "exit_visual_mode",
-    "context":
-    [
+
+  //
+  // swap line
+  //
+  { "keys": ["ctrl+super+k"], "command": "swap_line_up",
+    "context": [{ "key": "setting.command_mode" }, ]
+  },
+  { "keys": ["ctrl+super+j"], "command": "swap_line_down",
+    "context": [{ "key": "setting.command_mode" }, ]
+  },
+
+  //
+  // multiple cursor
+  //
+  { "keys": ["ctrl+shift+k"], "command": "select_lines", "args": {"forward": false} },
+  { "keys": ["ctrl+shift+j"], "command": "select_lines", "args": {"forward": true} },
+
+  //
+  // Exit insert mode
+  //
+  {
+    "keys": ["j", "j"], "command": "exit_insert_mode",
+    "context": [
+      { "key": "setting.command_mode", "operand": false },
+      { "key": "setting.is_widget", "operand": false }
+    ]
+  },
+
+  {
+    "keys": ["ctrl+j"], "command": "imeoff",
+    "context": [
+      { "key": "setting.command_mode", "operand": false },
+      { "key": "setting.is_widget", "operand": false }
+    ]
+  },
+  {
+    "keys": ["ctrl+["], "command": "imeoff",
+    "context": [
+      { "key": "setting.command_mode", "operand": false },
+      { "key": "setting.is_widget", "operand": false }
+    ]
+  },
+  //
+  // exit visual mode
+  //
+  {
+    "keys": ["ctrl+j"], "command": "exit_visual_mode",
+    "context": [
       { "key": "setting.command_mode"},
       { "key": "num_selections", "operand": 1},
       { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false },
       { "key": "setting.vintage_ctrl_keys" }
     ]
   },
-  { "keys": ["ctrl+j"], "command": "vi_cancel_current_action", "context":
-    [
+  {
+    "keys": ["ctrl+j"], "command": "vi_cancel_current_action",
+    "context": [
       { "key": "setting.command_mode" },
       { "key": "vi_has_input_state" },
       { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false },
       { "key": "setting.vintage_ctrl_keys" }
     ]
   },
-  { "keys": ["ctrl+j"], "args": null, "command": "single_selection",
-    "context":
-    [
-      {"key": "setting.command_mode"},
-      {"key": "selection_empty"}
-    ]
+  {
+    "keys": ["ctrl+j"], "args": null, "command": "single_selection",
+    "context": [{"key": "setting.command_mode"}, {"key": "selection_empty"} ]
   },
 
   //
   // always paste register "0 on p
   //
-  { "keys": ["p"], "command": "vi_paste_right", "args": {"register": "0"},
+  {
+    "keys": ["p"], "command": "vi_paste_right", "args": {"register": "0"},
     "context": [{"key": "setting.command_mode"}]
   },
 
@@ -171,28 +219,53 @@
   },
 
   //
-  // browser refresh (for smartphone DEV)
+  // move tab with gt, gT
   //
   {
-      "keys": ["command+r"], "command": "browser_refresh", "args": {
-          "auto_save": true,
-          "delay": 0.5,
-          "activate": false,
-          "browsers" : ["chrome"]
-      }
+    "keys": ["g", "t"],
+    "command": "next_view",
+    "context": [
+      { "key": "setting.is_widget", "operand": false },
+      { "key": "setting.command_mode" }
+    ]
   },
-
+  {
+    "keys": ["g", "T"],
+    "command": "prev_view",
+    "context": [
+      { "key": "setting.is_widget", "operand": false },
+      { "key": "setting.command_mode" }
+    ]
+  },
   //
-  // Origami keybind
+  // move pane
   //
-  // create vertical pane
-  { "keys": [":", "v", "s", "p"], "command": "create_pane", "args": {"direction": "right", "give_focus": true} },
-  // create horizontal pane
-  { "keys": [":", "s", "p"], "command": "create_pane", "args": {"direction": "down", "give_focus": true} },
-  // destroy pane
-  { "keys": [":", "d", "p"], "command": "destroy_pane", "args": {"direction": "self"} },
-  { "keys": [":", "p", "k"], "command": "travel_to_pane", "args": {"direction": "up"} },
-  { "keys": [":", "p", "l"], "command": "travel_to_pane", "args": {"direction": "right"} },
-  { "keys": [":", "p", "j"], "command": "travel_to_pane", "args": {"direction": "down"} },
-  { "keys": [":", "p", "h"], "command": "travel_to_pane", "args": {"direction": "left"} },
+  {
+   "keys": ["g", "k"], "command": "travel_to_pane", "args": {"direction": "up"},
+    "context": [
+      { "key": "setting.is_widget", "operand": false },
+      { "key": "setting.command_mode" }
+    ]
+  },
+  {
+   "keys": ["g", "l"], "command": "travel_to_pane", "args": {"direction": "right"},
+    "context": [
+      { "key": "setting.is_widget", "operand": false },
+      { "key": "setting.command_mode" }
+    ]
+  },
+  {
+   "keys": ["g", "j"], "command": "travel_to_pane", "args": {"direction": "down"},
+    "context": [
+      { "key": "setting.is_widget", "operand": false },
+      { "key": "setting.command_mode" }
+    ]
+  },
+  {
+   "keys": ["g", "h"], "command": "travel_to_pane", "args": {"direction": "left"},
+    "context": [
+      { "key": "setting.is_widget", "operand": false },
+      { "key": "setting.command_mode" }
+    ]
+  },
 ]

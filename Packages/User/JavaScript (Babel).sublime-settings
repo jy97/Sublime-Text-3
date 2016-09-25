@@ -1,7 +1,6 @@
 {
 	"extensions":
 	[
-		"js",
-		"es6"
+		"js"
 	]
 }

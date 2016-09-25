@@ -34,7 +34,7 @@
   //
   // open in iterm
   //
-  { "keys": ["ctrl+super+t"], "command": "open_mac_terminal" },
+  { "keys": ["super+ctrl+t"], "command": "open_terminal_project_folder" },
 
   //
   // switch wrap-mode
@@ -87,6 +87,32 @@
   //                        //
   ////////////////////////////
   //
+  // console wrap
+  //
+  {
+    "keys": ["ctrl+c"], "command": "consolewrap",
+    "context": [{ "key": "setting.command_mode", "operand": true }]
+  },
+  //
+  // bookmarks
+  //
+  {
+    "keys": ["m"], "command": "next_bookmark",
+    "context": [{ "key": "setting.command_mode", "operand": true }]
+  },
+  {
+    "keys": ["ctrl+m"], "command": "prev_bookmark",
+    "context": [{ "key": "setting.command_mode", "operand": true }]
+  },
+  {
+    "keys": ["super+m"], "command": "toggle_bookmark",
+    "context": [{ "key": "setting.command_mode", "operand": true }]
+  },
+  {
+    "keys": ["alt+super+m"], "command": "clear_bookmarks",
+    "context": [{ "key": "setting.command_mode", "operand": true }]
+  },
+  //
   // move cursor in insertmode
   //
   // { "keys": ["ctrl+j"], "command": "move", "args": { "by": "lines", "forward": true }, "context": [{"key": "setting.command_mode", "operand": false}] },
@@ -138,10 +164,23 @@
   //
   // swap line
   //
-  { "keys": ["ctrl+super+k"], "command": "swap_line_up",
+  {
+    "keys": ["ctrl+super+k"], "command": "swap_line_up",
     "context": [{ "key": "setting.command_mode" }, ]
   },
-  { "keys": ["ctrl+super+j"], "command": "swap_line_down",
+  {
+    "keys": ["ctrl+super+j"], "command": "swap_line_down",
+    "context": [{ "key": "setting.command_mode" }, ]
+  },
+  //
+  // move text right and left
+  //
+  {
+    "keys": ["super+ctrl+h"], "command": "move_text_left" ,
+    "context": [{ "key": "setting.command_mode" }, ]
+  },
+  {
+    "keys": ["super+ctrl+l"], "command": "move_text_right",
     "context": [{ "key": "setting.command_mode" }, ]
   },
 

@@ -55,7 +55,7 @@
   // browser refresh (for smartphone DEV)
   //
   {
-    "keys": ["command+r"], "command": "browser_refresh",
+    "keys": ["ctrl+super+r"], "command": "browser_refresh",
     "args": {
       "auto_save": true,
       "delay": 0.5,
@@ -172,6 +172,7 @@
     "keys": ["ctrl+super+j"], "command": "swap_line_down",
     "context": [{ "key": "setting.command_mode" }, ]
   },
+
   //
   // move text right and left
   //
@@ -215,6 +216,7 @@
       { "key": "setting.is_widget", "operand": false }
     ]
   },
+
   //
   // exit visual mode
   //
@@ -238,6 +240,10 @@
   },
   {
     "keys": ["ctrl+j"], "args": null, "command": "single_selection",
+    "context": [{"key": "setting.command_mode"}, {"key": "selection_empty"} ]
+  },
+  {
+    "keys": ["ctrl+["], "args": null, "command": "single_selection",
     "context": [{"key": "setting.command_mode"}, {"key": "selection_empty"} ]
   },
 

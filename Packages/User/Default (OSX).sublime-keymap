@@ -1,5 +1,50 @@
 [
-	{ "keys": ["super+¥"], "command": "toggle_side_bar" },
+  //
+  // sidebar
+  //
+  { "keys": ["super+¥"], "command": "toggle_side_bar" },
+  // サイドバーをhjklで操作する
+  { "keys": ["j"], "command": "move", "args": {"by": "lines", "forward": true}, "context": [ {"key": "control", "operand": "sidebar_tree"} ]},
+  { "keys": ["k"], "command": "move", "args": {"by": "lines", "forward": false}, "context":[ {"key": "control", "operand": "sidebar_tree"} ]},
+  { "keys": ["l"], "command": "move", "args": {"by": "characters", "forward": true}, "context":[ {"key": "control", "operand": "sidebar_tree"} ]},
+  { "keys": ["h"], "command": "move", "args": {"by": "characters", "forward": false}, "context":[ {"key": "control", "operand": "sidebar_tree"} ]},
+
+
+  //
+  // Default Function Keybind
+  //
+  // switch wrap-mode
+  { "keys": ["ctrl+super+w"], "command": "toggle_setting", "args": {"setting": "word_wrap"}},
+  // open in finder
+  { "keys": ["ctrl+alt+o"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} },
+
+  // bookmarks
+  {
+    "keys": ["m"], "command": "next_bookmark",
+    "context": [{ "key": "setting.command_mode", "operand": true }]
+  },
+  {
+    "keys": ["super+m"], "command": "toggle_bookmark",
+    "context": [{ "key": "setting.command_mode", "operand": true }]
+  },
+  {
+    "keys": ["alt+super+m"], "command": "clear_bookmarks",
+    "context": [{ "key": "setting.command_mode", "operand": true }]
+  },
+
+
+  /////////////
+  // Package //
+  /////////////
+  // AceJump
+  {
+    "keys": ["ctrl+k"],
+    "command": "ace_jump_word"
+  },
+
+  //
+  // abacus
+  //
   { "keys": ["super+alt+a"], "command": "abacus" },
 
   //
@@ -37,11 +82,6 @@
   { "keys": ["super+ctrl+t"], "command": "open_terminal_project_folder" },
 
   //
-  // switch wrap-mode
-  //
-  { "keys": ["ctrl+super+w"], "command": "toggle_setting", "args": {"setting": "word_wrap"}},
-
-  //
   // SFTP: monitor file change & upload
   //
   { "keys": ["super+ctrl+m"], "command": "sftp_monitor_file" },
@@ -74,44 +114,20 @@
   // destroy pane
   { "keys": [":", "d", "p"], "command": "destroy_pane", "args": {"direction": "self"} },
   // move pane
-  { "keys": [":", "p", "k"], "command": "travel_to_pane", "args": {"direction": "up"} },
-  { "keys": [":", "p", "l"], "command": "travel_to_pane", "args": {"direction": "right"} },
-  { "keys": [":", "p", "j"], "command": "travel_to_pane", "args": {"direction": "down"} },
-  { "keys": [":", "p", "h"], "command": "travel_to_pane", "args": {"direction": "left"} },
+  { "keys": ["shift+ctrl+h"], "command": "travel_to_pane", "args": {"direction": "left"} },
+  { "keys": ["shift+ctrl+l"], "command": "travel_to_pane", "args": {"direction": "right"} },
 
-
+  // console wrap
+  {
+    "keys": ["ctrl+c"], "command": "consolewrap",
+    "context": [{ "key": "setting.command_mode", "operand": true }]
+  },
 
   ////////////////////////////
   //                        //
   //    Vintage Keybinds    //
   //                        //
   ////////////////////////////
-  //
-  // console wrap
-  //
-  {
-    "keys": ["ctrl+c"], "command": "consolewrap",
-    "context": [{ "key": "setting.command_mode", "operand": true }]
-  },
-  //
-  // bookmarks
-  //
-  {
-    "keys": ["m"], "command": "next_bookmark",
-    "context": [{ "key": "setting.command_mode", "operand": true }]
-  },
-  {
-    "keys": ["ctrl+m"], "command": "prev_bookmark",
-    "context": [{ "key": "setting.command_mode", "operand": true }]
-  },
-  {
-    "keys": ["super+m"], "command": "toggle_bookmark",
-    "context": [{ "key": "setting.command_mode", "operand": true }]
-  },
-  {
-    "keys": ["alt+super+m"], "command": "clear_bookmarks",
-    "context": [{ "key": "setting.command_mode", "operand": true }]
-  },
   //
   // move cursor in insertmode
   //
@@ -261,56 +277,5 @@
   {
     "keys": ["ctrl+p"], "command": "vi_paste_right", "args": {"register": "1"},
     "context": [{"key": "setting.command_mode"}]
-  },
-
-  //
-  // move tab with gt, gT
-  //
-  {
-    "keys": ["g", "t"],
-    "command": "next_view",
-    "context": [
-      { "key": "setting.is_widget", "operand": false },
-      { "key": "setting.command_mode" }
-    ]
-  },
-  {
-    "keys": ["g", "T"],
-    "command": "prev_view",
-    "context": [
-      { "key": "setting.is_widget", "operand": false },
-      { "key": "setting.command_mode" }
-    ]
-  },
-  //
-  // move pane
-  //
-  {
-   "keys": ["g", "k"], "command": "travel_to_pane", "args": {"direction": "up"},
-    "context": [
-      { "key": "setting.is_widget", "operand": false },
-      { "key": "setting.command_mode" }
-    ]
-  },
-  {
-   "keys": ["g", "l"], "command": "travel_to_pane", "args": {"direction": "right"},
-    "context": [
-      { "key": "setting.is_widget", "operand": false },
-      { "key": "setting.command_mode" }
-    ]
-  },
-  {
-   "keys": ["g", "j"], "command": "travel_to_pane", "args": {"direction": "down"},
-    "context": [
-      { "key": "setting.is_widget", "operand": false },
-      { "key": "setting.command_mode" }
-    ]
-  },
-  {
-   "keys": ["g", "h"], "command": "travel_to_pane", "args": {"direction": "left"},
-    "context": [
-      { "key": "setting.is_widget", "operand": false },
-      { "key": "setting.command_mode" }
-    ]
   },
 ]

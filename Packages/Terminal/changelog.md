@@ -1,4 +1,16 @@
 # changelog
+## 1.17.0
+
+ - Fixed OS X settings via @drbarrett in #162
+
+## 1.16.3
+
+ - Added unicode to str normalization for environment. Fixes #154
+
+## 1.16.2
+
+ - Added fallback for env setting. Fixes #154
+
 ## 1.16.1
 
  - Fixed Windows Powershell support. Fixes #151

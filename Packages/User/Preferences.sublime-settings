@@ -28,12 +28,15 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"Hayaku - tools for writing CSS faster",
+		"JavaScript"
 	],
 	"indent_guide_options":
 	[
 		"draw_normal",
 		"draw_active"
 	],
+	"jsoncomma_on_save": true,
 	"line_padding_bottom": 2,
 	"line_padding_top": 4,
 	"open_files_in_new_window": true,
@@ -51,6 +54,7 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"ui_font_size_small": true,
+	"ui_font_source_code_pro": true,
 	"ui_separator": true,
 	"vintage_ctrl_keys": true,
 	"vintage_start_in_command_mode": true,

@@ -13,3 +13,4 @@ Installed Packages/PyV8/
 *.merged-ca-bundle
 *.system-ca-bundle
 *.user-ca-bundle
+*.pickle

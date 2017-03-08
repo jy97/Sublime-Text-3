@@ -20,15 +20,18 @@
 
   // bookmarks
   {
-    "keys": ["m"], "command": "next_bookmark",
+    "keys": ["m"],
+    "command": "sublime_bookmark", "args" : { "type" : "goto" },
     "context": [{ "key": "setting.command_mode", "operand": true }]
   },
   {
-    "keys": ["super+m"], "command": "toggle_bookmark",
+    "keys": ["super+m"],
+    "command": "sublime_bookmark", "args" : { "type" : "add" },
     "context": [{ "key": "setting.command_mode", "operand": true }]
   },
   {
-    "keys": ["alt+super+m"], "command": "clear_bookmarks",
+    "keys": ["alt+super+m"],
+    "command": "sublime_bookmark", "args" : { "type" : "remove_all" },
     "context": [{ "key": "setting.command_mode", "operand": true }]
   },
 

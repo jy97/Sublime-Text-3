@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[\$('body').append('<style>#cl{position:fixed;left:0;bottom:0;display:inline-block;width:100%;max-height: 100px; background-color: rgba(0, 0, 0, 0.8);overflow-y:scroll; box-sizing: border-box; padding: 10px; color: #fff; z-index:9999;}</style><div id="cl"><p>console</p></div>');]]></content>
+    <tabTrigger>hcle</tabTrigger>
+    <scope>source.js</scope>
+    <description>HTML Console Element</description>
+</snippet>

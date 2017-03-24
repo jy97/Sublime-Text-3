@@ -1,0 +1,6 @@
+// Settings in here override those in "/User/consolewrap.sublime-settings",
+
+{
+  "single_quotes": true,
+  "log_types": ["log", "dir", "info", "warn", "error"]
+}

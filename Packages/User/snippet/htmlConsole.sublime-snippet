@@ -5,7 +5,7 @@ max-height: 100px; background-color: rgba(0, 0, 0, 0.8);overflow-y:scroll;
 box-sizing: border-box; padding: 10px; color: #fff; z-index:9999;}</style>
 <div id="cl"><p>console</p></div>
 <!-- ============================== debug ============================== -->]]></content>
-    <tabTrigger>hcl</tabTrigger>
+    <tabTrigger>hcle</tabTrigger>
     <scope>text.html</scope>
-    <description>HTML Console</description>
+    <description>HTML Console Element</description>
 </snippet>

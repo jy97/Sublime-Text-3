@@ -35,6 +35,17 @@
     "context": [{ "key": "setting.command_mode", "operand": true }]
   },
 
+  // override CSS auto-insertion of semi-colon
+  // https://superuser.com/questions/669616/
+  { "keys": [":"], "command": "insert_snippet", "args": {"contents": ":$0"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "selector", "operator": "equal", "operand": "source.css - meta.selector.css", "match_all": true },
+      { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\}|$)", "match_all": true }
+    ]
+  },
+
 
   /////////////
   // Package //

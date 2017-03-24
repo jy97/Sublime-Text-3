@@ -29,7 +29,8 @@
 	"ignored_packages":
 	[
 		"Hayaku - tools for writing CSS faster",
-		"JavaScript"
+		"JavaScript",
+		"SublimeCodeIntel"
 	],
 	"indent_guide_options":
 	[

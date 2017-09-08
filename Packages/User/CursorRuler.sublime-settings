@@ -1,0 +1,4 @@
+{
+  // The default: thick, not too distracting.
+  "cursor_rulers": [-0.1, 1.1]
+}

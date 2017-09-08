@@ -117,6 +117,22 @@
       "browsers" : ["chrome"]
     }
   },
+  //
+  // EmmetOneLine
+  //
+  {
+    "keys": ["ctrl+e"],
+    "command": "chain",
+    "args": {
+      "commands": [
+        ["emmet_css_from_one_line"],
+        ["expand_abbreviation_by_tab"]
+      ]
+    },
+    "context": [
+      { "key": "selector", "operator": "equal", "operand": "source.scss, source.css" }
+    ]
+  },
 
   //
   // Origami keybind
@@ -133,7 +149,7 @@
 
   // console wrap
   {
-    "keys": ["ctrl+c"], "command": "consolewrap",
+    "keys": ["ctrl+c"], "command": "console_wrap",
     "context": [{ "key": "setting.command_mode", "operand": true }]
   },
 
@@ -251,14 +267,28 @@
   // exit visual mode
   //
   {
-    "keys": ["ctrl+j"], "command": "exit_visual_mode",
+    "keys": ["ctrl+j"],
+    "command": "chain",
+    "args": {
+      "commands": [
+        ["single_selection"],
+        ["exit_visual_mode"]
+      ]
+    },
     "context": [
       { "key": "setting.command_mode"},
-      { "key": "num_selections", "operand": 1},
-      { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false },
       { "key": "setting.vintage_ctrl_keys" }
     ]
   },
+  // {
+  //   "keys": ["ctrl+j"], "command": "exit_visual_mode",
+  //   "context": [
+  //     { "key": "setting.command_mode"},
+  //     { "key": "num_selections", "operand": 1},
+  //     { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false },
+  //     { "key": "setting.vintage_ctrl_keys" }
+  //   ]
+  // },
   {
     "keys": ["ctrl+j"], "command": "vi_cancel_current_action",
     "context": [
@@ -270,7 +300,10 @@
   },
   {
     "keys": ["ctrl+j"], "args": null, "command": "single_selection",
-    "context": [{"key": "setting.command_mode"}, {"key": "selection_empty"} ]
+    "context": [
+      {"key": "setting.command_mode"},
+      {"key": "selection_empty"}
+    ]
   },
   {
     "keys": ["ctrl+["], "args": null, "command": "single_selection",

@@ -1,17 +1,18 @@
 {
 	"afn_insert_width_first": true,
+	"auto_complete_selector": "source, text",
 	"auto_complete_with_fields": true,
 	"bold_folder_labels": true,
 	"caret_style": "phase",
 	"close_windows_when_empty": false,
 	"color_scheme": "Packages/User/themes/Hopscotch_mod_dark_light.tmTheme",
-	"color_scheme_bak": "Packages/ayu/ayu-light.tmTheme",
+	"color_scheme_bak2": "Packages/ayu/ayu-light.tmTheme",
 	"default_encoding": "UTF-8",
 	"disable_formatted_linebreak": true,
 	"disable_tab_abbreviations": true,
 	"draw_indent_guides": true,
 	"draw_white_space": "all",
-	"enable_tab_scrolling": false,
+	"enable_tab_scrolling": true,
 	"fade_fold_buttons": false,
 	"fallback_encoding": "UTF-8",
 	"folder_exclude_patterns":
@@ -28,9 +29,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Hayaku - tools for writing CSS faster",
-		"JavaScript",
-		"SublimeCodeIntel"
+		"JavaScript"
 	],
 	"indent_guide_options":
 	[
@@ -51,7 +50,7 @@
 	"show_full_path": true,
 	"tab_size": 2,
 	"theme": "ayu-dark.sublime-theme",
-	"theme_bak": "ayu-light.sublime-theme",
+	"theme_bak2": "ayu-light.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"ui_font_size_small": true,

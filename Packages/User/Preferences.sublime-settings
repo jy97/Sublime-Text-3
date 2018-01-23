@@ -5,7 +5,7 @@
 	"bold_folder_labels": true,
 	"caret_style": "phase",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/User/themes/Hopscotch_mod_dark_light.tmTheme",
+	"color_scheme": "Packages/User/themes/Hopscotch_dark.tmTheme",
 	"color_scheme_bak2": "Packages/ayu/ayu-light.tmTheme",
 	"default_encoding": "UTF-8",
 	"disable_formatted_linebreak": true,
@@ -15,6 +15,7 @@
 	"enable_tab_scrolling": true,
 	"fade_fold_buttons": false,
 	"fallback_encoding": "UTF-8",
+	"fold_buttons": true,
 	"folder_exclude_patterns":
 	[
 		".git",
@@ -29,7 +30,9 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"JavaScript"
+		"Diffy",
+		"JavaScript",
+		"SublimeCodeIntel"
 	],
 	"indent_guide_options":
 	[
@@ -37,8 +40,12 @@
 		"draw_active"
 	],
 	"jsoncomma_on_save": true,
-	"line_padding_bottom": 2,
-	"line_padding_top": 4,
+	"line_padding_bottom": 3,
+	"line_padding_top": 5,
+	"match_brackets": true,
+	"match_brackets_content": true,
+	"match_selection": true,
+	"match_tags": true,
 	"open_files_in_new_window": true,
 	"rulers":
 	[
@@ -46,16 +53,22 @@
 		100
 	],
 	"scroll_past_end": true,
-	"show_encoding": true,
+	"show_encoding": false,
 	"show_full_path": true,
+	"show_line_endings": false,
 	"tab_size": 2,
 	"theme": "ayu-dark.sublime-theme",
 	"theme_bak2": "ayu-light.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"ui_font_size_small": true,
+	"ui_big_tabs": true,
+	"ui_fix_tab_labels": true,
+	"ui_font_size_small": false,
 	"ui_font_source_code_pro": true,
+	"ui_native_titlebar": false,
 	"ui_separator": true,
+	"ui_wide_scrollbars": false,
+	"use_simple_full_screen": true,
 	"vintage_ctrl_keys": true,
 	"vintage_start_in_command_mode": true,
 	"word_wrap": true

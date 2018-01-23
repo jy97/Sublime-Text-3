@@ -71,6 +71,9 @@
     // Disable gutter icons when doing multi-select
     "no_multi_select_icons": false,
 
+    "show_offscreen_bracket_popup": true,
+    "show_bracket_popup_always": true,
+
     // Rules that define the finding and matching of brackets
     // that are contained in a common scope.
     // Useful for bracket pairs that are the same but
@@ -434,42 +437,42 @@
         },
         "round": {
             "icon": "round_bracket",
-            "color": "brackethighlighter.round",
+            "color": "brackethighlighter.round"
             // "style": "underline"
         },
         "square": {
             "icon": "square_bracket",
-            "color": "brackethighlighter.square",
+            "color": "brackethighlighter.square"
             // "style": "underline"
         },
         "angle": {
             "icon": "angle_bracket",
-            "color": "brackethighlighter.angle",
+            "color": "brackethighlighter.angle"
             // "style": "underline"
         },
         "tag": {
             "icon": "tag",
-            "color": "brackethighlighter.tag",
+            "color": "brackethighlighter.tag"
             // "style": "underline"
         },
         "c_define": {
             "icon": "hash",
-            "color": "brackethighlighter.c_define",
+            "color": "brackethighlighter.c_define"
             // "style": "underline"
         },
         "single_quote": {
             "icon": "single_quote",
-            "color": "brackethighlighter.quote",
+            "color": "brackethighlighter.quote"
             // "style": "underline"
         },
         "double_quote": {
             "icon": "double_quote",
-            "color": "brackethighlighter.quote",
+            "color": "brackethighlighter.quote"
             // "style": "underline"
         },
         "regex": {
             "icon": "regex",
-            "color": "brackethighlighter.quote",
+            "color": "brackethighlighter.quote"
             // "style": "underline"
         }
     }

@@ -2,5 +2,5 @@
 
 {
   "single_quotes": true,
-  "log_types": ["log", "dir", "info", "warn", "error"]
+  "log_types": ["log", "alert", "dir", "info", "warn", "error"]
 }

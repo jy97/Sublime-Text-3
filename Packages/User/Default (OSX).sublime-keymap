@@ -174,9 +174,6 @@
   // Extended Tab Switcher
   { "keys": ["ctrl+t"], "command": "extended_switcher", "args": {"list_mode": "window"} },
 
-  // Diffy
-  { "keys": [ "super+shift+alt+k", "super+shift+alt+d" ], "command": "diffy"},
-  { "keys": [ "super+shift+alt+k", "super+shift+alt+c" ], "command": "diffy", "args": {"action": "clear"} },
   ////////////////////////////
   //                        //
   //    Vintage Keybinds    //

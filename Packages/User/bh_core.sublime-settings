@@ -250,7 +250,7 @@
             "style": "angle",
             "scope_exclude": ["string", "comment", "keyword.operator"],
             "language_filter": "whitelist",
-            "language_list": ["HTML", "HTML 5"],
+            "language_list": ["HTML", "HTML 5", "Smarty"],
             "enabled": true
         },
         // Angle
@@ -272,6 +272,7 @@
                 "HTML 5",
                 "XML",
                 "PHP",
+                "Smarty",
                 "HTML (Rails)",
                 "HTML (Jinja Templates)",
                 "HTML (Twig)",
@@ -309,7 +310,7 @@
             ],
             "plugin_library": "bh_modules.rubykeywords",
             "language_filter": "whitelist",
-            "language_list": ["HTML", "HTML 5", "PHP", "HTML (Rails)"],
+            "language_list": ["HTML", "HTML 5", "PHP", "Smarty", "HTML (Rails)"],
             "enabled": true
         },
         // Ruby conditional statements
